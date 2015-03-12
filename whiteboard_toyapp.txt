@@ -1,0 +1,47 @@
+if an index needs to be updated by a call to the database anyway,
+can is it best to update entire page, or write it so that a call will it update database, but also
+use input to dynamically change webpage at the same time, seems dicey, as you would want confirmation that
+the db had been updated, if the list is pulling from database, that would serve as confirmation?
+
+-/new_event should be a post
+post "/new event"
+input = params
+db connexec(insert $1 )input
+
+redirect "tracked"
+
+not null violation?
+
+make each list item a link to its own page,
+with a button to log
+-event erb
+-event erb layout will show event as h1
+
+individual page,
+-make button,
+-pushing button timestamps,
+  -first check bind with alert
+  -then use jquery timestamp as input for post?
+
+questions, timestamp,
+deletions from post request,
+server location important, must work out issues with time/zone conflicts,
+maybe walk through doing a psql function, so if new info is entered in one column, another auto fills
+linking tables, also good,
+
+
+use constraints rather than deletions,
+reuatest sql, start, set to now,
+select
+created at
+datetime.new
+normalizing db
+
+
+3/8,
+starting over,
+make tables:
+events,
+id, event name (eventually add user_id created by column)
+times,
+event_id, references events.id, time/date stamp

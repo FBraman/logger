@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Individual Event</title>
+    <link rel="stylesheet" href="/public/css/stylesheet.css">
+  </head>
+
+  <body>
+
+    <h1><%= event_name %></h1>
+    <span id="log_button">
+      <form action="/new_time" method="post" class="button">
+        <label for="STAMP IT">STAMP IT</label>
+        <input type="submit" name="name"  value="<%= event_name %>">
+
+            <ol id="stamp_list">
+            <% stamps.each do |stamp| %>
+            <li><%= stamp["occurence"] %></li>
+            <% end %>
+            </ol>
+
+
+    <a href="/tracked_events">All Events</a>
+
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>toy time</title>
+    </head>
+
+    <body>
+      <h1>I would like to time stamp these events</h1>
+
+      <ul id="events_list">
+
+        <% events.each do |event| %>
+        <li><a href="/tracked_events/<%= event["id"] %>"><%= event["name"] %></a></li>
+            <% end %>
+      </ul>
+
+      <div>
+
+        <form action="/new_event" method="post" class="button">
+          <label for="new_event">something else to track?</label>
+          <input type="text" id="new_event" name="new_event">
+        <input type="submit">
+      </form>
+      
+      </div>
+
+      <script src="/js/vendor/jquery-1.11.2.min.js"></script>
+      <script src="/js/toyapp.js"></script>
+
+    </body>
+
+    <html>
