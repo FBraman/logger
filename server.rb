@@ -2,6 +2,7 @@ require 'sinatra'
 require 'pg'
 require 'pry'
 require 'session'
+require 'time'
 
 def db_connection
   begin
@@ -39,7 +40,8 @@ end
 
 
 post "/new_time" do
-  tm = Time.new
+  tm = Time.new.to_time
+  binding.pry
   # local_id = params["id"].to_i
   local_event_name = params["name"]
   id = []

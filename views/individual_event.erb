@@ -2,12 +2,29 @@
 <html>
   <head>
     <title>Individual Event</title>
-    <link rel="stylesheet" href="/public/css/stylesheet.css">
-  </head>
+    <!-- <link rel="stylesheet" href="/public/css/stylesheet.css"> -->
+    <link rel="stylesheet" href="/css/foundation.min.css" type="text" charset="utf-8">
+    <link rel="stylesheet" href="/css/normalize.css" type="text" charset="utf-8">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text" charset="utf-8">
+
+    </head>
 
   <body>
+    <div class="row">
+      <div class="small-4 columns"></div>
+      <div class="small-6 columns"><h1 class="titles"><%= event_name %></h1></div>
+      <div class="small-4 columns"></div>
+    </div>
+    <!--   <div class="small-12 columns" id="header"></div>
+        </div>
 
-    <h1><%= event_name %></h1>
+        <div class="small-2 columns" id="top-bar-left">
+        </div> -->
+
+
+
+
+
     <span id="log_button">
       <form action="/new_time" method="post" class="button">
         <label for="STAMP IT">STAMP IT</label>
