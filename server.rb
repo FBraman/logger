@@ -101,9 +101,9 @@ get "/tracked_events/:id" do
   name = db_connection do |conn|
     conn.exec(events_by_user_sql, [id])
   end
-  time_stamps = "SELECT timestamp FROM time_stamps
+  time_stamps = "SELECT time_stamps.timestamp FROM time_stamps
             JOIN tracked_event ON time_stamps.event_id = tracked_event.id
-            WHERE  time_stamps.event_id = $1"
+            WHERE time_stamps.event_id = $1 ORDER BY timestamp DESC"
   stamps = db_connection do |conn|
     conn.exec(time_stamps, [id])
   end

@@ -31,8 +31,9 @@
         <input type="submit" name="name"  value="<%= event_name %>">
 
             <ol id="stamp_list">
+
             <% stamps.each do |stamp| %>
-            <li><%= stamp["occurence"] %></li>
+            <li><%= stamp["timestamp"] %></li>
             <% end %>
             </ol>
 
