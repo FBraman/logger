@@ -2,10 +2,13 @@
   <html>
     <head>
         <title>toy time</title>
+        <link rel="stylesheet" href="/css/foundation.min.css" type="text" charset="utf-8">
+        <link rel="stylesheet" href="/css/normalize.css" type="text" charset="utf-8">
+        <link rel="stylesheet" href="/css/stylesheet.css" type="text" charset="utf-8">
     </head>
 
     <body>
-      <h1>I would like to time stamp these events</h1>
+      <h1>Events</h1>
 
       <ul id="events_list">
 
@@ -21,8 +24,27 @@
           <input type="text" id="new_event" name="new_event">
         <input type="submit">
       </form>
-      
+
       </div>
+
+      <div>
+        <form action="/logout" method="post">
+          <label for="logout">logout</label>
+          <input type="submit" name="logout" value="logout">
+        </form>
+      </div>
+
+
+      <div id="view_choice">
+      <div>
+        <form action="/choose_view" method="post">
+          <input type="submit" name="choice" value="all">
+          <input type="submit" name="choice" value="mine">
+        </form>
+      </div>
+
+    </div>
+
 
       <script src="/js/vendor/jquery-1.11.2.min.js"></script>
       <script src="/js/toyapp.js"></script>

@@ -45,3 +45,30 @@ events,
 id, event name (eventually add user_id created by column)
 times,
 event_id, references events.id, time/date stamp
+
+3/14, id is used as reference for pages, still need to change the searches by id as well,
+whiteboard
+1. users,
+- need sessions,
+- new user /post, include user id and password
+    -first make log in page
+    -add to db
+      -new table for users
+        -id primary key,
+        -associate user id in
+        -look at corning for schema
+        -when displaying events, choice for all events or user events
+        search events or by user id
+        -on login, if user does not exist, offer to creat a new one, with hide show button
+        -ability to delete user info, clear table?, make a couple of levels of barriers,
+        -ability to delete instances
+        -ability to delete events
+
+- new user /post should add row to users table in toyapp db
+- cookies should be assinged to users based on sign in
+- change searching db by id, current searched by name in some places,
+- consider making a user class, so that when a user logs in a user object is made that passed the use
+ful information, is there anything there that would be needed that was not passed in cookies?
+
+3/16,
+-fix new event to include user_id tag for future reference

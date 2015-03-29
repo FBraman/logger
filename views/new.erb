@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>toy time</title>
+      <link rel="stylesheet" href="/css/foundation.min.css" type="text" charset="utf-8">
+      <link rel="stylesheet" href="/css/normalize.css" type="text" charset="utf-8">
+      <link rel="stylesheet" href="/css/stylesheet.css" type="text" charset="utf-8">
+    </head>
+
+    <body>
+
+    <h1>Logger</h1>
+
+    <div class="row">
+      <div class="small-2 columns"></div>
+      <div class="small-2 columns"><h2>New User?</h2></div>
+
+        <div class="small-4 columns">
+          <form action="/new_user" method="post">
+            <label for="new_user">New User Name</label>
+            <input type="text" id="user_name" name="user_name">
+
+          <form action="/new_user" method="post">
+            <label for="new_password">New Password</label>
+            <input type="password" id="new_password" name="new_password">
+            <input type = submit>
+          </form>
+        </div>
+        <div class="small-2 columns"></div>
+      </div>
+
+      <a href="/logger">All ready have an account? Log in here</a>
+
+  </body>
+
+  </html>
